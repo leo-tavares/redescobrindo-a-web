@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head lang="pt-br">
+        <meta charset="UTF-8">
+        <link rel="icon" href="./assets/img/favicon.ico">
+        <link rel="stylesheet" href="./styles/reset.css">
+        <link rel="stylesheet" href="./styles/index.css">
+        <title>Bem vindo ao Resilia! &#x2764</title>
+    </head>
+    <body>
+        <header>
+            <h1>Resilia</h1>
+        </header>
+        <div class="form-container">
+            <form action="./pages/greetings.html" method="GET" >
+                <div class="table-row">
+                    <p>Nome completo</p>
+                    <p><input type="text" id="name" name="name" placeholder="Donald Ervin Knuth"/></p>
+                </div>
+
+                <div class="table-row">
+                    <p >Data de nascimento</p>
+                    <p><input type="date" max="2002-12-31" min="1920-12-31"/></p>
+                </div>
+
+                <div class="table-row">
+                <p for="cpf">cpf</p>
+                <p><input type="number" name="cpf" id="cpf" placeholder="123.456.789-70" ></p>
+                </div>
+
+                <div class="table-row">
+                    <p>
+                        Dúvidas ou sugestões?
+                    </p>
+                <p>
+                    <textarea name="comentarios" id="comentarios" cols="30" rows="8" ></textarea>
+                </p>
+                </div>
+
+                <div class="table-row">
+                    <p><!-- necessário para dar alinhamento --></p>
+                   <p> <input class="submit-btn" type="submit" ></p>
+                </div>
+            </form>
+          
+        </div>
+    </body>
+</html>

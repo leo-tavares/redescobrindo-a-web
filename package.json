@@ -1,0 +1,11 @@
+{
+  "name": "forms",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "workspaces":[
+    "desafios/*"
+  ],
+  "repository": "https://github.com/leo-tavares/redescobrindo-a-web-.git",
+  "license": "MIT"
+}
