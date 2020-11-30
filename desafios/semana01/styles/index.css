@@ -25,6 +25,8 @@ div.form-container {
 
 form {
   display: table;
+  margin: auto;
+  width: 100%;
   padding: 16px;
   margin: 16px;
 }
@@ -40,7 +42,7 @@ div.table-row p {
 
 form input {
   border: none;
-  width: 100%;
+  width: 80%;
   border-radius: 16px;
   margin: 8px;
   padding: 16px;
@@ -50,7 +52,7 @@ form input {
 textarea#comentarios {
   margin: 8px;
   padding: 8px;
-  width: 100%;
+  width: 80%;
   border-radius: 8px;
   text-align: center;
   border: none;
