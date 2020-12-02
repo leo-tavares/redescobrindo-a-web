@@ -16,7 +16,8 @@ header h1 {
 }
 
 div.form-container {
-  width: 50%;
+  width: 80%;
+  max-width: 1024px;
   margin: auto;
   border-radius: 16px;
   text-align: center;
@@ -24,48 +25,55 @@ div.form-container {
 }
 
 form {
-  display: table;
-  margin: auto;
-  width: 100%;
-  padding: 16px;
-  margin: 16px;
+  padding: 8px;
 }
 
-div.table-row{
-  display: table-row;
+.form-item {
+  margin: 16px 0;
 }
 
-div.table-row p {
-  display: table-cell;
+.form-item label {
+  display: inline-block; /* para alterar width */
+  font-size: 20px;
+  width: 30%;
   vertical-align: middle;
 }
 
-form input {
+.form-item input {
   border: none;
-  width: 80%;
   border-radius: 16px;
-  margin: 8px;
   padding: 16px;
-  text-align: left;
+  width: 60%;
+}
+
+.form-item label.comentario {
+  vertical-align: top;
 }
 
 textarea#comentarios {
-  margin: 8px;
-  padding: 8px;
-  width: 80%;
-  border-radius: 8px;
-  text-align: center;
+  resize: none;
   border: none;
+  text-align: center;
+  border-radius: 16px;
+
+  width: 60%;
+  padding: 16px;
 }
 
 input.submit-btn {
-  padding: 0px;
   background-color: #2f2e2e;
-  border: none;
-  text-align: center;
-  font-size: 32px;
-  font-weight: bold;
   color: #fad000;
+  text-align: center;
+  font-weight: bold;
+
+  border: none;
+  
+  font-size: 32px;
+  padding: 8px;
+}
+
+input.submit-btn:active{
+  opacity: 0.8;
 }
 
 /* Chrome, Safari, Edge, Opera */

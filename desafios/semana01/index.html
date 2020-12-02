@@ -13,33 +13,24 @@
         </header>
         <div class="form-container">
             <form action="./pages/greetings.html" method="GET" >
-                <div class="table-row">
-                    <p>Nome completo</p>
-                    <p><input type="text" id="name" name="name" placeholder="Donald Ervin Knuth"/></p>
+                <div class="form-item">
+                    <label for="name">Nome completo</label>
+                    <input type="text" id="name" name="name" placeholder="Donald Ervin Knuth"/>
                 </div>
-
-                <div class="table-row">
-                    <p >Data de nascimento</p>
-                    <p><input type="date" max="2002-12-31" min="1920-12-31"/></p>
+                <div class="form-item">
+                    <label for="data-nascimento" >Data de nascimento</label>
+                    <input type="date" id="data-nascimento" name="data-nascimento" max="2002-12-31" min="1920-12-31"/>
                 </div>
-
-                <div class="table-row">
-                <p for="cpf">cpf</p>
-                <p><input type="number" name="cpf" id="cpf" placeholder="123.456.789-70" ></p>
+                <div class="form-item">
+                    <label for="cpf">cpf</label>
+                    <input type="number" id="cpf" name="cpf"  placeholder="123.456.789-70" >
                 </div>
-
-                <div class="table-row">
-                    <p>
-                        Dúvidas ou sugestões?
-                    </p>
-                <p>
+                <div class="form-item">
+                    <label class="comentario" for="comentarios">Dúvidas ou sugestões?</label>                    
                     <textarea name="comentarios" id="comentarios" cols="30" rows="8" ></textarea>
-                </p>
                 </div>
-
-                <div class="table-row">
-                    <p><!-- necessário para dar alinhamento --></p>
-                   <p> <input class="submit-btn" type="submit" ></p>
+                <div class="form-item">
+                    <input class="submit-btn" type="submit" >
                 </div>
             </form>
           
