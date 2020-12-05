@@ -1,0 +1,67 @@
+@media screen and (max-width: 780px) {
+  .header-content {
+    flex-direction: column;
+    padding: 8px;
+  }
+
+  .nav-items li {
+    height: 25px;
+    width: 50px;
+    margin: 4px 8px;
+  }
+  /* desfazendo o hover sem js */
+  .nav-items li a:hover {
+    color: black;
+    font-size: medium;
+    font-weight: normal;
+  }
+
+  .movies-container .movie {
+    height: 210px;
+    width: 140px;
+
+    flex-shrink: 1;
+    border-radius: 8px;
+    transition: transform 300ms;
+  }
+
+  /* scrollbar */
+  .movies-container::-webkit-scrollbar {
+    height: 4px;
+  }
+}
+
+@media screen and (max-height: 720px) {
+  .movies-container .movie {
+    height: 180px;
+    width: 120px;
+  }
+  /* scrollbar */
+  .movies-container::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  /* desfazendo o hover sem js */
+  .nav-items li a:hover {
+    color: black;
+    font-size: medium;
+    font-weight: normal;
+  }
+}
+/* iphone 5/SE */
+@media screen and (max-height: 580px) {
+  .movies-container .movie {
+    height: 160px;
+    width: 105px;
+  }
+  /* scrollbar */
+  .movies-container::-webkit-scrollbar {
+    height: 2px;
+  }
+  /* desfazendo o hover sem js */
+  .nav-items li a:hover {
+    color: black;
+    font-size: medium;
+    font-weight: normal;
+  }
+}
