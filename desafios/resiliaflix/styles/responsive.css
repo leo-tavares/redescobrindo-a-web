@@ -1,13 +1,13 @@
 @media screen and (max-width: 780px) {
   .header-content {
     flex-direction: column;
-    padding: 8px;
+    padding: 0.5rem;
   }
 
   .nav-items li {
     height: 25px;
-    width: 50px;
-    margin: 4px 8px;
+    width: 60px;
+    margin: 0.25rem 0.5rem;
   }
   /* desfazendo o hover sem js */
   .nav-items li a:hover {
