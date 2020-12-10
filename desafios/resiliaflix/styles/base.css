@@ -1,0 +1,14 @@
+:root {
+  --body-bg: wheat;
+  --primary: yellow;
+  --default-text: black;
+  --default-box-shadow: gray;
+  --header-bg: black;
+  --header-text-hover: #682c0e;
+  --scrollbar: #682c0e;
+  --footer-bg: black;
+}
+
+body {
+  background-color: var(--body-bg);
+}

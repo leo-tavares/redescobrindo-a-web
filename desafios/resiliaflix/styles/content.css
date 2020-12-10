@@ -1,0 +1,77 @@
+.movies-container {
+  width: 90vw;
+  margin: 0 auto;
+  display: flex;
+  overflow-y: auto;
+}
+
+/* scrollbar */
+.movies-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.movies-container::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 8px var(--default-box-shadow);
+  height: 40px;
+}
+.movies-container::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar);
+  border-radius: 16px;
+}
+
+.movies-container .movie-link {
+  flex-grow: 1;
+  margin: 1%;
+}
+
+.movies-container .movie {
+  height: 300px;
+  width: 200px;
+  flex-shrink: 1;
+  border-radius: 8px;
+  transition: transform 300ms;
+}
+
+.movies-container .movie:hover {
+  box-shadow: 0 0 8px 4px var(--default-box-shadow);
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 780px) {
+  .movies-container .movie {
+    height: 210px;
+    width: 140px;
+
+    flex-shrink: 1;
+    border-radius: 8px;
+    transition: transform 300ms;
+  }
+
+  /* scrollbar */
+  .movies-container::-webkit-scrollbar {
+    height: 4px;
+  }
+}
+
+@media screen and (max-height: 720px) {
+  .movies-container .movie {
+    height: 180px;
+    width: 120px;
+  }
+  /* scrollbar */
+  .movies-container::-webkit-scrollbar {
+    height: 4px;
+  }
+}
+
+/* iphone 5/SE */
+@media screen and (max-height: 580px) {
+  .movies-container .movie {
+    height: 160px;
+    width: 105px;
+  }
+  /* scrollbar */
+  .movies-container::-webkit-scrollbar {
+    height: 2px;
+  }
+}
