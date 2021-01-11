@@ -25,7 +25,7 @@
 - prompt => 1 - Rio; 2 - mercearia; 3 - ⭐ especial ⭐; (dessa vez sem o hostel)
 (O especial pergunta sobre o trabamento de esgoto);
 
-🤔 - ( $user pergunta a Bario ) Podemos checar a estação de tratamento de esgoto?
+🤔 - ( $user pergunta a Niquel ) Podemos checar a estação de tratamento de esgoto?
 
 😑 - É sério que você quer ir até lá? O que acha de conheçer minha merceário primeiro 😅? 
 (o jogador é conduzido a mercearia)

@@ -1,0 +1,23 @@
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid black;
+    border-radius: 16px;
+    padding: 16px;
+    width: 80vw;
+}
+
+#container > #image {
+    width: 60vw;
+    border-radius: 16px;
+    margin: 16px 0;
+}
+
+
+#input__container > label > input {
+    cursor: pointer;
+    margin: 16px 0;   
+}
