@@ -2,10 +2,11 @@ import Bloco from "./components/bloco/index.js";
 import { createElement } from "./utils.js";
 
 const personagem = {
-    name: ""
-}
+  name: "",
+  places: [""],
+};
 
-const {Container, ButtonNext} = Bloco({
+const { Container, ButtonNext } = Bloco({
   title: "Bem vindo a Radiante",
   contexto: `Radiante é conhecida por ser um local calmo e tranquilo, com baixos
 indícies de criminalidade e uma boa expectativa de vida. A natureza desse
@@ -28,33 +29,34 @@ ButtonNext.onclick = function () {
 document.body.append(Container);
 
 function bloco1() {
-  const {Container, ButtonNext, Contexto} = Bloco({
+  const { Container, ButtonNext, Contexto, Image } = Bloco({
     title: "Bem vindo a Radiante",
     contexto: `🤨 - Oi, você deve ser o amigo do Bario... espero que nos ajude a entender o motivo de Radiante esta passando por tantos problemas 😔.
         🙂 Venha... vou te apresantar a Radiante, mas antes me diga o seu nome.`,
     opts: [],
     imagePath: "./src/assets/img/hand-shake.png",
-    buttonText: "Avançar"
+    buttonText: "Avançar",
   });
-
+  Image.style.width = "30vw";
   const nameInput = createElement("input", "input__name");
   Container.insertBefore(nameInput, ButtonNext);
 
-  ButtonNext.onclick = function(){
-      personagem.name = nameInput.value;
-      nameInput.remove();
-      bloco1_1(Contexto, this)
-  }
+  ButtonNext.onclick = function () {
+    personagem.name = nameInput.value;
+    nameInput.remove();
+    bloco1_1(Contexto, this);
+  };
 
   document.body.innerHTML = "";
   document.body.append(Container);
 }
 
-function bloco1_1(Contexto, buttonThis){
-    Contexto.textContent = `😅 - ... putz esqueci de me apresentar, eu sou o Niquel um comerciante local
-    👌 - ${personagem.name}, agora podemos conhecer Radiante.`
-    buttonThis.onclick = function(){
-        // bloco2()
-    }
+function bloco1_1(Contexto, buttonThis) {
+  Contexto.textContent = `😅 - ... putz esqueci de me apresentar, eu sou o Niquel um comerciante local
+    👌 - ${personagem.name}, agora podemos conhecer Radiante.`;
+  buttonThis.onclick = function () {
+    bloco2();
+  };
 }
+
 

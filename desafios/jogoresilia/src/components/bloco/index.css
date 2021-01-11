@@ -17,7 +17,35 @@
 }
 
 
+#input__container > label {
+    display: block;
+    text-align: left;
+    height: 2rem;
+}
+
 #input__container > label > input {
     cursor: pointer;
-    margin: 16px 0;   
+    margin: 16px 8px;   
+}
+
+#btn-next {
+    margin: 8px 0;
+    width: 40%;
+    height: 2rem;
+    font-size: 1rem;
+    outline:none;
+
+    border-width: 0;
+    border-radius: 8px;
+
+    transition: transform .3s;
+}
+
+#btn-next:hover {
+    transform: scale(1.1);
+}
+
+#input__name {
+    padding: 8px;
+    width: 40%;
 }

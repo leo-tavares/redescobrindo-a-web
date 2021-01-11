@@ -5,7 +5,7 @@ const Bloco = function ({ title, contexto, opts, buttonText, imagePath }) {
   const Title = createElement("h1", "title_main");
   const Contexto = createElement("blockquote", "contexto");
   const Image = createElement("img", "image");
-  Image.type = "image/jpeg"
+  Image.type = "image/jpeg";
   Image.src = imagePath;
   !!imagePath || (Image.style.display = "none");
 
@@ -15,29 +15,35 @@ const Bloco = function ({ title, contexto, opts, buttonText, imagePath }) {
     Opt.name = "options";
     const Label = createElement("label", `label__option${key}`);
     Label.for = `option${key}`;
-    Label.textContent = option;
     Label.append(Opt);
+    Label.append(option);
     return Label;
   });
-
 
   const ButtonNext = createElement("button", "btn-next");
 
   Title.textContent = title;
   Contexto.textContent = contexto;
   ButtonNext.textContent = buttonText;
- 
+
   if (Options.length) {
     const InputContainer = createElement("div", "input__container");
 
     InputContainer.append(...Options);
-
     Container.append(Title, Contexto, Image, InputContainer, ButtonNext);
-  } else {
-    Container.append(Title, Contexto, Image, ButtonNext);
+    return {
+      Container,
+      ButtonNext,
+      Contexto,
+      Image,
+      getInputChecked: () => {
+        const [radioButtons] = Options.filter(option => option.firstChild.checked)
+        return radioButtons.textContent;
+      },
+    };
   }
-
-  return {Container, ButtonNext, Contexto};
+  Container.append(Title, Contexto, Image, ButtonNext);
+  return { Container, ButtonNext, Contexto, Image };
 };
 
 export default Bloco;
