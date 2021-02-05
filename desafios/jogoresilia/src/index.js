@@ -59,4 +59,42 @@ function bloco1_1(Contexto, buttonThis) {
   };
 }
 
+function bloco2() {
+  const { Container, ButtonNext, Contexto, getInputChecked } = Bloco({
+    title: "Conhecendo Radiante",
+    contexto: `🙂 - Radiante como você pode notar é uma cidade pequena, nossa ecônimia é mantida pelo comércio local... até que...bom... deixa pra lá 🤐.
+  
+          🙂 - Além do centro da cidade temos alguns locais que precisa conhecer. O que você quer conheçer primerio?`,
+    opts: [
+      "Rio",
+      "mercearia",
+      "hostel",
+      "Estação de tratamento de esgoto ⭐ especial ⭐",
+    ],
+    imagePath: "./src/assets/img/radiante.jpg",
+    buttonText: "Avançar",
+  });
 
+  ButtonNext.onclick = function () {
+    const option = getInputChecked();
+    const places = {
+      hostel() {
+        bloco2__Hostel(Contexto);
+      },
+    };
+    places[option]();
+  };
+
+  document.body.innerHTML = "";
+  document.body.append(Container);
+}
+
+function bloco2__Mercearia(Contexto) {}
+
+function bloco2__Rio(Contexto) {}
+
+function bloco2__Espacial(Contexto) {}
+
+function bloco2__Hostel(Contexto) {
+  Contexto.textContent = `😀 - Você acabou de chegar e quer ir descançar? Eu sei que a viajem foi longa mas o que acha de conheçer os outros lugares?`;
+}

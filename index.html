@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      canvas {
+        border: 0.5px solid gray;
+        padding: 0.1rem;
+      }
+      button {
+        width: 10rem;
+        margin-top: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas width="400" height="400"></canvas>
+    <button id="btn-continue" onclick="reStart()" disabled>Continue</button>
+    <button id="btn-stop" onclick="stop()">STOP</button>
+
+    <script>
+      let canvas = document.querySelector("canvas");
+      let context = canvas.getContext("2d");
+
+      function getRandomFrangmentOfColor() {
+        return Math.floor(Math.random() * 15).toString(16);
+      }
+
+      function getRandomColor() {
+        let randonColor = "#";
+        for (let i = 0; i < 6; i++) {
+          randonColor += getRandomFrangmentOfColor();
+        }
+        return randonColor;
+      }
+      const gradient = context.createLinearGradient(0, 0, 200, 0);
+
+      const intervaloDePintura = 1;//tempo em ms
+      const startInterval = () => {
+        return setInterval(() => {
+          gradient.addColorStop(0, getRandomColor());
+          gradient.addColorStop(1, getRandomColor());
+          context.fillStyle = gradient;
+          context.fillRect(
+            Math.floor(Math.random() * 390),
+            Math.floor(Math.random() * 390),
+            Math.floor(Math.random() * 20),
+            Math.floor(Math.random() * 20)
+          );
+        }, intervaloDePintura);
+      };
+
+      let intervalId = startInterval();
+
+      const btnContinue = document.getElementById("btn-continue");
+      const stop = () => {
+        clearInterval(intervalId);
+        btnContinue.disabled = false;
+      };
+
+      const reStart = () => {
+        intervalId = startInterval();
+        btnContinue.disabled = true;
+      };
+    </script>
+  </body>
+</html>
