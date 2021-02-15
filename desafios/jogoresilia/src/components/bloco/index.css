@@ -25,7 +25,7 @@
 
 #input__container > label > input {
     cursor: pointer;
-    margin: 16px 8px;   
+    margin: 16px 8px;
 }
 
 #btn-next {
@@ -43,6 +43,11 @@
 
 #btn-next:hover {
     transform: scale(1.1);
+}
+
+.btn-death {
+	background-color: brown;
+	color: white;
 }
 
 #input__name {

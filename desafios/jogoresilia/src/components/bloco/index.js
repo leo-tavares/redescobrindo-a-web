@@ -19,7 +19,6 @@ const Bloco = function ({ title, contexto, opts, buttonText, imagePath }) {
     Label.append(option);
     return Label;
   });
-
   const ButtonNext = createElement("button", "btn-next");
 
   Title.textContent = title;
@@ -27,17 +26,23 @@ const Bloco = function ({ title, contexto, opts, buttonText, imagePath }) {
   ButtonNext.textContent = buttonText;
 
   if (Options.length) {
-    const InputContainer = createElement("div", "input__container");
+		const InputContainer = createElement("div", "input__container");
 
     InputContainer.append(...Options);
     Container.append(Title, Contexto, Image, InputContainer, ButtonNext);
     return {
-      Container,
+			Container,
       ButtonNext,
       Contexto,
-      Image,
+			Image,
+			InputContainer,
+			Options,
       getInputChecked: () => {
-        const [radioButtons] = Options.filter(option => option.firstChild.checked)
+				const [radioButtons] = Options.filter(option => option.firstChild.checked)
+				console.log(Options);
+				console.log(Options.length);
+
+				console.log(radioButtons);
         return radioButtons.textContent;
       },
     };
